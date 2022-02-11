@@ -187,18 +187,18 @@ export default () => {
             <p className='w-full flex justify-end'>now</p>
           </div>
           <div className='flex'>
-            <p>${holderInfo.firstMoney}</p>
-            <p className='w-full flex justify-end'>${holderInfo.money}</p>
+            <p>${holderInfo.firstMoney.toFixed(4)}</p>
+            <p className='w-full flex justify-end'>${holderInfo.money.toFixed(4)}</p>
 
           </div>
           <div className='flex'>
-            <p>{holderInfo.firstPerc}%</p>
-            <p className='w-full flex justify-end'>{holderInfo.perc}%</p>
+            <p>{holderInfo.firstPerc.toFixed(4)}%</p>
+            <p className='w-full flex justify-end'>{holderInfo.perc.toFixed(4)}%</p>
 
           </div>
           <br />
           <div className='flex'>
-            <p style={{ color: (holderInfo.money - holderInfo.firstMoney > 0) ? "#4ade80" : "#f87171"}}>${holderInfo.money - holderInfo.firstMoney}</p>
+            <p style={{ color: (holderInfo.money - holderInfo.firstMoney > 0) ? "#4ade80" : "#f87171" }}>${(holderInfo.money - holderInfo.firstMoney).toFixed(4)}</p>
             <p style={{ color: (holderInfo.money - holderInfo.firstMoney > 0) ? "#4ade80" : "#f87171" }} className='w-full flex justify-end'>{(((holderInfo.money - holderInfo.firstMoney) / holderInfo.firstMoney) * 100).toFixed(4)}%</p>
 
           </div>
